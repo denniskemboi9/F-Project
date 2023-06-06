@@ -19,7 +19,7 @@ class PoemsController < ApplicationController
     title=params[:title]
     author=params[:author]
     content=params[:content]
-    user_id=params[:user_id]
+    user_id=session[:user_id]
     
     if(title.present? && author.present? && content.present? && user_id.present?)
 
