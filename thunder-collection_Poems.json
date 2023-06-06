@@ -1,0 +1,217 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Poems",
+    "dateExported": "2023-06-06T08:22:58.943Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "294d764f-e4ad-42f6-9281-b28658af68fa",
+            "colId": "cd170c24-997b-445f-876a-38a1e2ccc6d0",
+            "containerId": "",
+            "name": "Get Users",
+            "url": "http://localhost:9292/users",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-06-05T20:11:27.557Z",
+            "modified": "2023-06-05T20:47:55.754Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4c4c5e6b-9d18-4648-af55-eb7f226f8617",
+            "colId": "cd170c24-997b-445f-876a-38a1e2ccc6d0",
+            "containerId": "",
+            "name": "Add User",
+            "url": "http://localhost:9292/users/adduser",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-06-06T06:56:31.468Z",
+            "modified": "2023-06-06T07:38:53.290Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "kk"
+                    },
+                    {
+                        "name": "password",
+                        "value": "1234"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "89b1b4cc-19fd-4df4-ac10-75347639cdd7",
+            "colId": "cd170c24-997b-445f-876a-38a1e2ccc6d0",
+            "containerId": "",
+            "name": "Get Current User",
+            "url": "http://localhost:9292/current_user",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2023-06-06T07:39:27.952Z",
+            "modified": "2023-06-06T07:41:17.839Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8401fa26-e227-4a25-ac94-c72b360d0e41",
+            "colId": "cd170c24-997b-445f-876a-38a1e2ccc6d0",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:9292/auth/login",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-06-06T07:13:54.217Z",
+            "modified": "2023-06-06T07:50:06.479Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "dennis"
+                    },
+                    {
+                        "name": "password",
+                        "value": "1234"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "2196960b-8339-44d7-a269-11e0046d7b90",
+            "colId": "cd170c24-997b-445f-876a-38a1e2ccc6d0",
+            "containerId": "",
+            "name": "Logout",
+            "url": "http://localhost:9292/auth/logout",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-06-06T07:41:44.765Z",
+            "modified": "2023-06-06T07:42:10.285Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "brian"
+                    },
+                    {
+                        "name": "password",
+                        "value": "1234"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "39f8b493-470d-4b90-9998-45aab542b348",
+            "colId": "cd170c24-997b-445f-876a-38a1e2ccc6d0",
+            "containerId": "",
+            "name": "Get Poems",
+            "url": "http://localhost:9292/poems",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-06-06T07:43:06.167Z",
+            "modified": "2023-06-06T07:58:43.691Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b4434d57-4848-46af-8a85-a9d6c76da79a",
+            "colId": "cd170c24-997b-445f-876a-38a1e2ccc6d0",
+            "containerId": "",
+            "name": "Add Poem",
+            "url": "http://localhost:9292/poems/addpoem",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-06-06T07:45:08.710Z",
+            "modified": "2023-06-06T08:19:08.651Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "The poem of Trials"
+                    },
+                    {
+                        "name": "author",
+                        "value": "Dennis Kemboi"
+                    },
+                    {
+                        "name": "content",
+                        "value": "Trying Trying Trying Trying Trying Trying Trying Trying "
+                    },
+                    {
+                        "name": "user_id",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "5e9f23d3-b961-4cc3-8268-67692fa238c8",
+            "colId": "cd170c24-997b-445f-876a-38a1e2ccc6d0",
+            "containerId": "",
+            "name": "Edit Poem",
+            "url": "http://localhost:9292/poems/editpoem/2",
+            "method": "PATCH",
+            "sortNum": 85000,
+            "created": "2023-06-06T08:02:03.667Z",
+            "modified": "2023-06-06T08:03:29.281Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "The poem of Trials"
+                    },
+                    {
+                        "name": "author",
+                        "value": "Dennis Kemboi"
+                    },
+                    {
+                        "name": "content",
+                        "value": "Trying Trying Trying Trying Trying Trying Trying Trying"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "e6d595a3-d297-455c-a150-587a7531b0fc",
+            "colId": "cd170c24-997b-445f-876a-38a1e2ccc6d0",
+            "containerId": "",
+            "name": "Delete a Poem",
+            "url": "http://localhost:9292/poems/delete/1",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-06-06T07:56:56.227Z",
+            "modified": "2023-06-06T07:58:07.230Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
