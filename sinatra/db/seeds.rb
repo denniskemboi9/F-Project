@@ -32,15 +32,15 @@ puts "🌱 Seeding messages..."
 
 poem_title = ["Poem of TMs", "Poem of Senior TMs", "Poem of Students", "Poem of Students", "Poem of Students"]
 poem_content = ["I liked this", "I missed this", "I enjoyed this", "This were trials", "And I aced them", "No matter what", "Juma said", "I am a champion", "Forever", "And Ever"]
+author_names = ["Dennis Kemboi", "Brian Osoro", "Dennis Kemboi", "Brian Osoro", "Dennis Kemboi", "Brian Osoro"]
 
-Author.create(name: "Kevin")
-Author.create(name: "Beatrice")
-Author.create(name: "Juma")
-Author.create(name: "Kush")
 
-Author.all.each do |author|
+User.create(username: "dennis", email: "dennis@gmail.com", password: "1234")
+User.create(username: "brian",email: "brian@gmail.com", password: "1234")
+
+User.all.each do |user|
   3.times do
-    Poem.create(title: poem_title.sample, author_id: author.id, content: poem_content.sample)
+    Poem.create(title: poem_title.sample, author: author_names.sample,content: poem_content.sample, user_id: user.id)
   end
 end
 

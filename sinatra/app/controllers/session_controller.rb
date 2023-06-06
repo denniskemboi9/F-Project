@@ -1,28 +1,46 @@
 class SessionController < ApplicationController
     set default_content_type: "application/json"
+
+
+    # Login
+    post "/auth/login" do
+        username=params[:username]
+        password=params[:password]
+    
+       
+        if(username.present? &&  password.present? )
+            user = User.find_by(username: username)
+
+            if (user && user.authenticate(password))
+                session[:user_id] = user.id
+
+                message = {:success=> "Login success"}
+                message.to_json
+
+            else
+                status 401
+                message = {:error=> "Wrong username or password"}
+                message.to_json
+            end
+          
+        
+        else
+            status 406
+            message = {:error=> "All values are required"}
+            message.to_json()
+        end
+    end
+
+
+    # Logout
+    post "/auth/logout" do
+       session.delete :user_id
+       message = {:success=> "Logout success"}
+       message.to_json()
+    end 
+
     
 end
 
 
 # # Imported
-# class SessionController < ApplicationController
-#     skip_before_action :authorize, only: [:login]
-  
-#      def login 
-#         user = User.find_by(username: params[:username] )
-#         if(user && user.authenticate(params[:password]))
-#           session[:user_id] = user.id
-#           render json: { status: :created, loggedin: true, user: user}
-  
-#         else
-#           render json: {errors: ["Wrong username or password"]}, status: :unauthorized
-#         end
-#      end
-  
-  
-#      #logout
-#      def logout
-#         session.delete :user_id
-#         head :no_content
-#      end
-#   end

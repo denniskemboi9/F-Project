@@ -10,16 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_05_102447) do
-
-  create_table "authors", force: :cascade do |t|
-    t.string "name"
-  end
+ActiveRecord::Schema.define(version: 2023_06_05_154345) do
 
   create_table "poems", force: :cascade do |t|
     t.string "title"
-    t.string "author_id"
+    t.string "author"
     t.string "content"
+    t.string "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
