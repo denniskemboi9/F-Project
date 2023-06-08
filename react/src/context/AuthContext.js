@@ -56,10 +56,30 @@ export default function AuthProvider({children})
         })
     }
 
-    //  // Register
-    // const register = () =>{
-    //        console.log("Hello from context")
-    // }
+    // Register
+    const register = (username, email, password) =>{
+        // Post this data to the backend
+        fetch("/users/adduser",{
+            method: "POST",
+            headers:{"Content-Type": "application/json"},
+            body: JSON.stringify({username, email, password})
+        })
+        .then(res=>res.json())
+        .then((response) => {
+            console.log(response);
+            if (response.error) {
+              Swal.fire("Error", response.error, "error");
+            } else if (response.success) {
+              navigate("/login");
+              Swal.fire("Success", response.success, "success");
+              setChange(!change)
+              
+            } else {
+              Swal.fire("Error", "Something went wrong", "error");
+            }
+          });
+        
+    }
 
      // Logout
      const logout = () =>{
@@ -79,14 +99,6 @@ export default function AuthProvider({children})
             navigate("/login")
             setCurrentUser()
             setChange(!change)
-
-
-            // setOnChange(!change)
-
-            // setCurrentUser()
-            // Swal.fire({
-    
-            //   })
 
         })
     }
@@ -113,7 +125,7 @@ export default function AuthProvider({children})
     const contextData = {
         login, 
         currentUser,
-        // register, 
+        register, 
         logout
     }
 

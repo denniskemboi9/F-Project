@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import blog2 from "../images/blog2.jpg"
 import { useParams } from 'react-router-dom'
 import { PoemContext } from '../context/PoemContext'
 import { AuthContext } from '../context/AuthContext'
@@ -16,22 +15,23 @@ export default function Poem() {
 
   return (
     <div className='container mx-auto'>
-        <h4>{singlePoem && singlePoem.title}</h4>
-        <p>by: {singlePoem && singlePoem.author}</p>
-        <div className='row gx-5'>
-            <div className='col-lg-8 bg-light'> 
+      <h4>{singlePoem && singlePoem.title}</h4>
+      <p>by: {singlePoem && singlePoem.author}</p>
+      <div className='row gx-5'>
+          <div className='col-lg-8 bg-light'> 
 
-              <p className='mt-3'>
-                 {singlePoem && singlePoem.content}
-              </p>
+            <p className='mt-3'>
+                {singlePoem && singlePoem.content}
+            </p>
 
-            </div>
-            <div className='d-flex mt-4 gap-5 '>
-                
-                <p>Date created: {singlePoem && singlePoem.created_at}</p>
-            </div>
-            <div>
+          </div>
 
+          <div className='d-flex mt-4 gap-5 '>
+              
+              <p>Date created: {singlePoem && singlePoem.created_at}</p>
+          </div>
+          
+          <div>
             {
               currentUser && currentUser.username==singlePoem.user.username?
               <>
@@ -40,9 +40,9 @@ export default function Poem() {
             </>
             :""
             }
-            </div>
+          </div>
 
-        </div>
+      </div>
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import { useContext, useState } from "react"
-import edit from "../images/edit.png"
 import { AuthContext } from "../context/AuthContext"
 import { PoemContext } from "../context/PoemContext"
 

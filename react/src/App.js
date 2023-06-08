@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css'
 import logo from './logo.svg';
 import Layout from './layout/Layout';
 import Login from './pages/Login';
+import Register from './pages/Register';
 import Search from './pages/Search';
 import Home from "./pages/Home"
 import Profile from "./pages/Profile"
@@ -22,7 +24,8 @@ function App() {
           <Route path='search' element={<Search />} />
           <Route path='newpoem' element={<NewPoem />} />
           <Route path='profile' element={<Profile />} />
-          <Route path='login' element={<Login />} />        
+          <Route path='login' element={<Login />} />   
+          <Route path="/register" element={<Register />} />     
           <Route path='poem/:id' element={<Poem />} />
         </Route>
       </Routes>
