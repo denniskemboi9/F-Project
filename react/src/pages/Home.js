@@ -72,7 +72,7 @@ return (
                                 <div className="container-fluid">
                           <p className="col-md-12 lead fw-bolder">{poem.title}</p>                                                      
                           <p className="col-md-12 lead text-muted">by {poem.author}</p>                                                   
-                          <p className="col-md-12 lead" style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>by {poem.content}</p>
+                          <p className="col-md-12 lead" style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{poem.content}</p>
                             {/* <button className="btn btn-dark btn-lg" type="button">Learn More</button> */}         
                             <Link to={`/poem/${poem.id}`} href="#" className="btn btn-success btn-sm">Read More</Link>
                         </div>

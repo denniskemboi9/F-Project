@@ -16,7 +16,7 @@ export default function Poem() {
   return (
     <div className='container mx-auto'>
       <h4>{singlePoem && singlePoem.title}</h4>
-      <p>by: {singlePoem && singlePoem.author}</p>
+      <p> {singlePoem && singlePoem.author}</p>
       <div className='row gx-5'>
           <div className='col-lg-8 bg-light'> 
 
@@ -35,7 +35,7 @@ export default function Poem() {
             {
               currentUser && currentUser.username==singlePoem.user.username?
               <>
-            <button className="btn btn-success btn-sm m-1">Edit</button>
+            <button className="btn btn-primary btn-sm m-1">Edit</button>
             <button onClick={()=>deletePoem(singlePoem.id)} className="btn btn-danger btn-sm m-1">Delete</button>
             </>
             :""
